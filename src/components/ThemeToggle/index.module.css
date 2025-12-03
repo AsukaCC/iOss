@@ -1,0 +1,19 @@
+/* 主题切换按钮 - 默认样式 */
+.theme-toggle {
+  padding: 8px;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.theme-toggle:hover {
+  color: var(--nav-text-hover, currentColor);
+  background-color: var(--nav-bg-hover, rgba(0, 0, 0, 0.05));
+}
+

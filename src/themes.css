@@ -1,0 +1,123 @@
+/* 主题色配置 */
+
+/* 亮色主题 */
+:root {
+  /* 背景色 */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f7fa;
+  --bg-tertiary: #f8fafc;
+  --bg-sidebar: #ffffff;
+  --bg-hover: rgba(0, 0, 0, 0.05);
+  --bg-active: rgba(0, 0, 0, 0.1);
+
+  /* 文字颜色 */
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --text-tertiary: #94a3b8;
+  --text-inverse: #ffffff;
+
+  /* 边框颜色 */
+  --border-color: #e2e8f0;
+  --border-light: #f1f5f9;
+
+  /* 阴影 */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+  /* 品牌色 */
+  --color-primary: #6366f1;
+  --color-primary-hover: #4f46e5;
+
+  /* 导航栏 */
+  --nav-bg: #ffffff;
+  --nav-text: #64748b;
+  --nav-text-hover: #1e293b;
+  --nav-bg-hover: rgba(0, 0, 0, 0.05);
+  --nav-bg-active: rgba(0, 0, 0, 0.1);
+  --nav-logo-bg: rgba(99, 102, 241, 0.1);
+  --nav-logo-text: #6366f1;
+}
+
+/* 暗色主题 */
+[data-theme='dark'] {
+  /* 背景色 */
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #334155;
+  --bg-sidebar: #1a1e23;
+  --bg-hover: rgba(255, 255, 255, 0.1);
+  --bg-active: rgba(255, 255, 255, 0.15);
+
+  /* 文字颜色 */
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-tertiary: #94a3b8;
+  --text-inverse: #1e293b;
+
+  /* 边框颜色 */
+  --border-color: #334155;
+  --border-light: #475569;
+
+  /* 阴影 */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4),
+    0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+
+  /* 品牌色 */
+  --color-primary: #818cf8;
+  --color-primary-hover: #6366f1;
+
+  /* 导航栏 */
+  --nav-bg: #1a1e23;
+  --nav-text: #9ca3af;
+  --nav-text-hover: #ffffff;
+  --nav-bg-hover: rgba(255, 255, 255, 0.1);
+  --nav-bg-active: rgba(255, 255, 255, 0.15);
+  --nav-logo-bg: rgba(255, 255, 255, 0.1);
+  --nav-logo-text: #ffffff;
+}
+
+/* 跟随系统主题 */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    /* 背景色 */
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-tertiary: #334155;
+    --bg-sidebar: #1a1e23;
+    --bg-hover: rgba(255, 255, 255, 0.1);
+    --bg-active: rgba(255, 255, 255, 0.15);
+
+    /* 文字颜色 */
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --text-tertiary: #94a3b8;
+    --text-inverse: #1e293b;
+
+    /* 边框颜色 */
+    --border-color: #334155;
+    --border-light: #475569;
+
+    /* 阴影 */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4),
+      0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+
+    /* 品牌色 */
+    --color-primary: #818cf8;
+    --color-primary-hover: #6366f1;
+
+    /* 导航栏 */
+    --nav-bg: #1a1e23;
+    --nav-text: #9ca3af;
+    --nav-text-hover: #ffffff;
+    --nav-bg-hover: rgba(255, 255, 255, 0.1);
+    --nav-bg-active: rgba(255, 255, 255, 0.15);
+    --nav-logo-bg: rgba(255, 255, 255, 0.1);
+    --nav-logo-text: #ffffff;
+  }
+}

@@ -1,0 +1,113 @@
+/* 导航栏 */
+.left-sidebar {
+  width: 64px;
+  background-color: var(--nav-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  gap: 24px;
+  color: var(--nav-text);
+  z-index: 10;
+  flex-shrink: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logo-container {
+  width: 40px;
+  height: 40px;
+  background-color: var(--nav-logo-bg);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--nav-logo-text);
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 1.25rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.add-button {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.nav-item {
+  padding: 8px;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+}
+
+.nav-item:hover {
+  color: var(--nav-text-hover);
+  background-color: var(--nav-bg-hover);
+}
+
+.nav-item-active {
+  color: var(--nav-text-hover);
+  background-color: var(--nav-bg-active);
+}
+
+.nav-item-active:hover {
+  background-color: var(--nav-bg-active);
+  opacity: 0.9;
+}
+
+.bottom-menu {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-inverse);
+  font-weight: bold;
+  font-size: 0.75rem;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.user-avatar:hover {
+  background-color: var(--color-primary-hover);
+}
