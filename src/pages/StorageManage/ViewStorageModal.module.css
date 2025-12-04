@@ -1,0 +1,45 @@
+.modal-body-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detail-label {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.detail-value {
+  font-size: 14px;
+  color: var(--text-primary);
+  padding: 8px 12px;
+  background-color: var(--bg-secondary);
+  border-radius: 6px;
+  word-break: break-all;
+  font-family: monospace;
+}
+
+.button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+
+.button-primary {
+  background-color: var(--color-primary);
+  color: #fff;
+
+  &:hover {
+    background-color: var(--color-primary-hover);
+  }
+}

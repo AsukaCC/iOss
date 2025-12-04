@@ -20,6 +20,31 @@ body {
   height: 100%;
 }
 
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--bg-secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: var(--bg-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-button {
+  background-color: var(--bg-primary);
+  border-radius: 4px;
+}
+
 /* 应用容器 */
 .app-container {
   display: flex;

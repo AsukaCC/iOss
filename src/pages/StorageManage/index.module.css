@@ -150,3 +150,52 @@
     color: var(--text-secondary);
   }
 }
+
+/* Table Styles */
+.storage-table-container {
+  flex: 1;
+  overflow: hidden; /* Changed from auto to hidden to let Table component handle scroll */
+  padding: 0 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.storage-item-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--text-primary);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background-color: var(--bg-secondary);
+}
+
+.action-btn.delete:hover {
+  border-color: #ef4444;
+  color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.05);
+}

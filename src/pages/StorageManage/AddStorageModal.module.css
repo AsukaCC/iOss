@@ -1,0 +1,83 @@
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.input,
+.select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  outline: none;
+  font-size: 14px;
+  transition: all 0.2s;
+
+  &:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(var(--color-primary-rgb), 0.2);
+  }
+}
+
+.select {
+  cursor: pointer;
+}
+
+/* Button styles - kept for specific custom buttons in footer if needed */
+.button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+
+.button-cancel {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+
+  &:hover {
+    background-color: var(--bg-hover);
+    border-color: var(--text-secondary);
+  }
+}
+
+.button-test {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.button-test:hover {
+  background-color: var(--bg-hover);
+  border-color: var(--text-secondary);
+}
+
+.button-confirm {
+  background-color: var(--color-primary);
+  color: #fff;
+
+  &:hover {
+    background-color: var(--color-primary-hover);
+  }
+}

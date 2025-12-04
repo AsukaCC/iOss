@@ -1,20 +1,6 @@
+import { ConfigState, ThemeMode } from '@/types';
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-
-export type ThemeMode = 'light' | 'dark';
-
-/**
- * 配置接口
- */
-export interface ConfigState {
-  /** 主题模式 */
-  theme: ThemeMode;
-  /** 设置主题 */
-  setTheme: (theme: ThemeMode) => void;
-  /** 切换主题 */
-  toggleTheme: () => void;
-}
-
 /**
  * 获取系统主题偏好
  */
