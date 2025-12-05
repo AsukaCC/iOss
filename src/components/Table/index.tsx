@@ -16,6 +16,7 @@ export interface TableProps<T> {
   rowKey: keyof T | ((record: T) => string);
   emptyText?: string;
   className?: string;
+  onRowClick?: (record: T, index: number) => void;
 }
 
 function Table<T>({
@@ -24,6 +25,7 @@ function Table<T>({
   rowKey,
   emptyText = '暂无数据',
   className = '',
+  onRowClick,
 }: TableProps<T>) {
   const getRowKey = (record: T): string => {
     if (typeof rowKey === 'function') {
@@ -53,7 +55,10 @@ function Table<T>({
           <tbody>
             {data.length > 0 ? (
               data.map((record, index) => (
-                <tr key={getRowKey(record)}>
+                <tr
+                  key={getRowKey(record)}
+                  onClick={() => onRowClick?.(record, index)}
+                  className={onRowClick ? styles['clickable-row'] : ''}>
                   {columns.map((col) => (
                     <td
                       key={col.key}

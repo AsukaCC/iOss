@@ -1,36 +1,14 @@
 import dayjs from 'dayjs';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import styles from './index.module.css';
 import AddStorageModal from './AddStorageModal';
 import ViewStorageModal from './ViewStorageModal';
 import { useStorageStore } from '@/store/storageStore';
 import { StorageItem } from '@/types';
 import Table, { Column } from '@/components/Table';
+import SideMenu, { storageTypes } from '@/components/SideMenu';
 
 const StorageManage = () => {
-  const storageTypes = [
-    {
-      name: '阿里云 OSS',
-      icon: '#icon-aliyun',
-      type: 'aliyun',
-    },
-    // {
-    //   name: '腾讯云 COS',
-    //   icon: '#icon-tengxunyun',
-    //   type: 'tencent',
-    // },
-    // {
-    //   name: '七牛云 Kodo',
-    //   icon: '#icon-qiniuyun',
-    //   type: 'qiniu',
-    // },
-    // {
-    //   name: 'Amazon S3',
-    //   icon: '#icon-amazon',
-    //   type: 's3',
-    // },
-  ];
-
   // 选中的存储类型
   const [selectedStorageType, setSelectedStorageType] = useState<string>('');
 
@@ -55,11 +33,6 @@ const StorageManage = () => {
   const handleStorageTypeClick = (type: string) => {
     setSelectedStorageType(type);
   };
-
-  // 初始化选中的存储类型
-  useEffect(() => {
-    setSelectedStorageType(storageTypes[0].type);
-  }, []);
 
   // 添加存储配置
   const handleAddStorageClick = () => {
@@ -179,21 +152,10 @@ const StorageManage = () => {
 
   return (
     <div className={styles['storage-manage-container']}>
-      <div className={styles['left-sidebar']}>
-        {storageTypes.map((type) => (
-          <div
-            key={type.type}
-            title={type.name}
-            className={`${styles['storage-type-item']} ${
-              selectedStorageType === type.type ? styles['active'] : ''
-            }`}
-            onClick={() => handleStorageTypeClick(type.type)}>
-            <svg className="icon" aria-hidden="true">
-              <use xlinkHref={type.icon}></use>
-            </svg>
-          </div>
-        ))}
-      </div>
+      <SideMenu
+        activeKey={selectedStorageType}
+        onSelect={handleStorageTypeClick}
+      />
       <div className={styles['right-content']}>
         <div className={styles['tool-bar']}>
           <div className={styles['button-group']}>

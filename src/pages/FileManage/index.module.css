@@ -1,4 +1,4 @@
-.storage-manage-container {
+.file-manage-container {
   width: 100%;
   height: 100%;
   display: flex;
@@ -52,7 +52,7 @@
   }
 }
 
-/* New Search Box Styles */
+/* Search Box Styles */
 .search-box {
   position: relative;
   display: flex;
@@ -74,7 +74,7 @@
     border-color: var(--color-primary);
     box-shadow: 0 0 0 3px
       color-mix(in srgb, var(--color-primary), transparent 85%);
-    width: 280px; /* Expand on focus for better UX */
+    width: 280px;
   }
 }
 
@@ -119,9 +119,9 @@
 }
 
 /* Table Styles */
-.storage-table-container {
+.file-table-container {
   flex: 1;
-  overflow: hidden; /* Changed from auto to hidden to let Table component handle scroll */
+  overflow: hidden;
   padding: 0 20px 20px 20px;
   display: flex;
   flex-direction: column;
@@ -132,6 +132,10 @@
   align-items: center;
   gap: 8px;
   font-weight: 500;
+}
+
+.storage-item-name-text {
+  color: var(--text-primary);
 }
 
 .action-buttons {

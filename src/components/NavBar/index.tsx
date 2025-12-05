@@ -11,6 +11,11 @@ const NavBar = () => {
       path: '/dashboard',
     },
     {
+      icon: '#icon-weibiaoti--',
+      label: '文件管理',
+      path: '/file-manage',
+    },
+    {
       icon: '#icon-cunchu',
       label: '存储管理',
       path: '/storage-manage',

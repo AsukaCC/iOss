@@ -9,6 +9,8 @@ import NavBar from './components/NavBar';
 import Dashboard from './pages/Dashboard';
 import Settings from './pages/Settings';
 import StorageManage from './pages/StorageManage';
+import FileManage from './pages/FileManage';
+import FileDetail from './pages/FileManage/FileDetail';
 
 // 布局组件
 const Layout = ({ children }: { children: React.ReactNode }) => {
@@ -30,6 +32,14 @@ function App() {
     {
       path: '/settings',
       element: <Settings />,
+    },
+    {
+      path: '/file-manage',
+      element: <FileManage />,
+    },
+    {
+      path: '/file-manage/detail/:id',
+      element: <FileDetail />,
     },
     {
       path: '/storage-manage',

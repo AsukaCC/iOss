@@ -93,7 +93,7 @@ const AddStorageModal = ({
             width: '100%',
           }}>
           <div>
-            {isEdit && (
+            {/* {isEdit && (
               <button
                 className={styles['button'] + ' ' + styles['button-test']}
                 onClick={handleTest}>
@@ -102,7 +102,7 @@ const AddStorageModal = ({
                 </svg>
                 <span>测试连接</span>
               </button>
-            )}
+            )} */}
           </div>
           <div style={{ display: 'flex', gap: '12px' }}>
             <button
